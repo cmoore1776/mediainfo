@@ -1,7 +1,7 @@
 # mediainfo
 
 ```bash
-docker run --rm -it -v $(pwd):/input mediainfo /input/Yosemite.mov
+docker run --rm -it -v $(pwd):/input shamelesscookie/mediainfo /input/Yosemite.mov
 
 General
 Complete name                            : /input/Yosemite.mov
