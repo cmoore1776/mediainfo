@@ -1,5 +1,11 @@
 # mediainfo
 
+MediaInfo displays the most relevant technical and tag data for video and audio files.
+
+https://mediaarea.net/en/MediaInfo
+
+## Usage
+
 ```bash
 docker run --rm -it -v $(pwd):/input shamelesscookie/mediainfo /input/Yosemite.mov
 
@@ -50,4 +56,10 @@ Color primaries                          : BT.601 NTSC
 Transfer characteristics                 : BT.709
 Matrix coefficients                      : BT.601
 Codec configuration box                  : avcC
+```
+
+## build
+
+```bash
+docker buildx build --no-cache --platform linux/amd64,linux/arm64 --build-arg VERSION --build-arg SHA256 -t shamelesscookie/mediainfo:latest --pull --push .
 ```
